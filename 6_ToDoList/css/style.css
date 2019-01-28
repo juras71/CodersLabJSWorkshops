@@ -1,0 +1,77 @@
+*{
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    background-image: linear-gradient(whitesmoke,grey);
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: center;
+}
+.toDo, .done {
+    background-color: darkslategrey;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    border: 2px solid rgba(100,120,140, 0.6);
+    font-family: FreeSerif , sans-serif;
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+    margin: 10px;
+    color: whitesmoke;
+
+}
+.done ul {
+    background-color: red;
+    color: white;
+}
+.toDoTask {
+    border: 2px solid rgba(100,120,140, 0.6);
+    background-color: lightgray;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px;
+    color: maroon;
+    font-size: 20px;
+}
+
+.taskList{
+    height: 100%;
+    display: flex;
+    width: 600px;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    padding-right:60px ;
+}
+
+#taskInput {
+    margin-top: 30px;
+    margin-left: 60px;
+    width: 90%;
+}
+#addTaskButton {
+    margin-left: 60px;
+    width: 50%;
+    height: 50px;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 20px;
+}
+#removeFinishedTasksButton{
+    margin-left: 60px;
+    width: 50%;
+    height: 50px;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-bottom: 50px;
+
+}
+h1 {
+    margin-left: 60px;
+}
