@@ -5,42 +5,39 @@
 
 body {
     display: flex;
-    background-image: linear-gradient(whitesmoke,grey);
+    background-color: #0e0b16;
     background-size: cover;
     background-repeat: no-repeat;
     justify-content: center;
 }
 .toDo, .done {
-    min-width: 500px;
-    width: 100%;
+    width: 400px;
     border-radius: 10px;
     padding: 10px;
-    border: 2px solid rgba(100,120,140, 0.6);
     font-family: FreeSerif , sans-serif;
     font-size: 30px;
     font-weight: bolder;
     text-align: center;
-    margin: 10px;
+    margin-bottom: 10px;
     color: whitesmoke;
 
 }
 .toDo{
-   background-color: darkslategrey;;
+   background-color: #f78f8f;
 }
 .done{
-    background-color: lawngreen;
+    background-color: #bae0bd;
 }
 .done ul {
-    background-color: lightgray;
+    background-color: #e7dfdd;
     color: green;
 }
 .toDoTask, #header {
-    border: 2px solid rgba(100,120,140, 0.6);
-    background-color: lightgray;
+    background-color: #e7dfdd;
     border-radius: 10px;
     padding: 5px;
     margin: 10px;
-    color: maroon;
+    color: #0e0b16;
     font-size: 20px;
     min-height: 55px;
 }
@@ -48,28 +45,33 @@ body {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     max-width: 500px;
 }
 
 .taskList{
-    height: 100%;
     display: flex;
-    width: 600px;
     flex-flow: column wrap;
     align-items: center;
-    justify-content: center;
     border-radius: 10px;
     border: 1px solid black;
-    padding-right:60px ;
+}
+#taskList{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+
 }
 
 #taskInput {
-    margin-top: 30px;
-    margin-left: 60px;
-    width: 80%;
+   background-color: #e7dfdd;
     display: inline-block;
     float: left;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 20px;
+    width: 360px;
 }
 
 #addTaskButton {
@@ -80,28 +82,27 @@ body {
     height: 40px;
     align-items: center;
     border-radius: 50%;
-    font-size: 20px;
     display: inline-block;
+    border: none;
+
 }
 #removeFinishedTasksButton{
-    margin-left: 60px;
-    width: 50%;
+    background-color: #4717f6 ;
+    width: 70%;
     height: 50px;
     align-items: center;
     border-radius: 10px;
     font-size: 20px;
     margin-bottom: 50px;
+    border: none;
 
 }
-h1 {
-    margin-left: 60px;
-}
+
 #header{
+    width: 400px;
     padding-top: 20px;
     padding-bottom: 20px;
     margin-top: 30px;
-    margin-left: 60px;
-    width: 90%;
     text-align: center;
 }
 .checked{
@@ -126,4 +127,11 @@ h1 {
 }
 .tickedImage{
     background-image: url("../images/icons8-checkmark-480.png");
+}
+#counterDiv{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 400px;
 }

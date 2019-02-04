@@ -6,13 +6,15 @@ document.addEventListener("DOMContentLoaded", function () {
     var newTaskClone = newTask.cloneNode(true)
     var addTaskButton = document.getElementById('addTaskButton')
     var tickedImage = document.createElement('div')
+    var removeFinishedBtn = document.getElementById('removeFinishedTasksButton')
+
     tickedImage.classList.add('tickedImage');
     addTaskButton.addEventListener('click', function () {
         var taskInput = document.getElementById('taskInput')
         toDoCounter+=1
         counterDiv.innerText='Liczba zadań do wykonania: '+toDoCounter
-        this.parentElement.firstElementChild.appendChild(counterDiv)
-        this.nextElementSibling.firstElementChild.appendChild(newTaskClone)
+        this.parentElement.parentElement.firstElementChild.appendChild(counterDiv)
+        this.parentElement.nextElementSibling.firstElementChild.appendChild(newTaskClone)
         newTaskClone.innerHTML += ` 
         <ul class="toDoTask">${taskInput.value}<span class="checked"></span>
         <li class="buttons">
@@ -56,6 +58,16 @@ document.addEventListener("DOMContentLoaded", function () {
             })
         }
         taskInput.value = ''
+
     })
+    removeFinishedBtn.addEventListener('click', function () {
+        var doneList = this.parentElement.children[2].lastElementChild;
+        for (var i=doneList.childNodes.length-1; i>0; i--){
+            doneList.removeChild(doneList.childNodes[i])
+        }
+        event.stopImmediatePropagation()
+
+})
+
 })
 
